@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Libre+Franklin:wght@100;200;300;400;500;600&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root
+{
+    --color-dark:#0D0D0D;
+    --color-dark2:#1d1c1c;
+    --color-dark3:#262626;
+    --color-dark4:#464545;
+    --color-white:#F2F2F2;
+    --color-green1:#04BF10;
+    --color-green2:#35F242;
+    --color-red:#BF0F1E;
+    --color-red2:#f51b2d;
+}
+/*Pagina */
+body
+{
+    font-family: 'Lato';
+    color: var(--color-green1);
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column; /* muda a direção dos itens no caso aqui em colunas*/
+    align-items: center; /*alinhas os itens no centro*/
+    gap:4rem; /* espaçamento intre os itens*/
+}
+h1
+{
+    font-size: 3rem;
+}
+
+/*Estilizando o conteudo da lista*/
+.content
+{
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+    
+}
+
+.content-add-item
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;/*para responsividade fazendo os elementos quebrarem quando a tela diminue*/
+}
+/* input e botão*/
+#input-new-task, #btn-new-task
+{
+    border:none;
+    font-size: 1rem;
+    outline: none;/*retira borda que gera ao clicar no input*/
+    padding: 1rem;
+
+}
+#input-new-task
+{
+    width: 20rem;
+    border-radius: 1rem;
+
+}
+#btn-new-task{
+    background-color: var(--color-dark2);
+    color: var(--color-white);
+    /*Para aredondar o botão*/
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    /*tempo de transição de cor do botão*/
+    transition: .4s;
+}
+ /*trocar a cor de fundo ao passar o mouse em cima do botão*/
+ #btn-new-task:hover
+ {
+    background-color: var(--color-dark3);
+ }
+
+ /* estilizando a lista*/
+ #list-task
+ {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+ }
+ #list-task li
+ {
+    list-style-type: none; /*tira as bolinhas da lista*/
+    font-size: 1.4rem;
+    text-transform: capitalize;/*coloca a primeira letra como maiuscula*/
+    display: flex;
+    justify-content: space-between;/*separa os elementos jogando cada um para suas estremidades*/
+    align-items: center;
+ }
+ #list-task li:hover
+ {
+    background-color: var(--color-dark3);
+    transition: .4s;
+    border-radius: 1rem;
+    padding-left: 1rem;
+ }
+ #btn-ok
+ {
+    border: none;
+    background-color: var(--color-green1);
+    color: var(--color-white);
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+
+ }
+ #btn-ok:hover
+ {
+    background-color: var(--color-green2);
+
+ }
